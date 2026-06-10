@@ -1,0 +1,14 @@
+BAG_INFO:
+  TEAM: xf
+  DESCRIPTION: Slow-speed seagull car
+  ODOM_TOPIC: "/odom"
+  TRACK: SCHOOL
+  URDF: "urdf/hylight_xf.urdf"
+SENSOR_INFO:
+  LIDAR_FRONT:
+    TOPIC: "/rslidar_points"
+    FRAME: "rslidar"  
+  CAMERA_FRONT:
+    TOPIC: "/front_camera/image_undistorted/compressed"
+    FRAME: "/camera"  
+    CALIB: "/front_camera/camera_info"

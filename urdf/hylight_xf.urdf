@@ -1,0 +1,19 @@
+<robot name="hylight_xf">
+  <link name="rear_axle_middle" />
+  
+  <link name="rslidar" />
+  
+  <link name="/camera" />
+  
+  <joint name="lidar_front_joint" type="fixed">
+    <parent link="rear_axle_middle" />
+    <child link="rslidar" />
+    <origin xyz="1.43 0 1.21" rpy="0 0 0" />
+  </joint>
+  
+  <joint name="camera_front_joint" type="fixed">
+    <parent link="rear_axle_middle" />
+    <child link="/camera" />
+    <origin xyz="3.18 0 0.33" rpy="0 0 0" />
+  </joint>
+</robot>

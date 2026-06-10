@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<robot name="bjut_vehicle">
+  <link name="base_link" />
+
+  <link name="rslidar" />
+  <link name="imu_link" />
+  <link name="gps_link" />
+
+  <link name="cam1" />
+  <link name="cam2" />
+  <link name="cam3" />
+  <link name="cam4" />
+  <link name="cam5" />
+  <link name="cam6" />
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="rslidar" />
+    <origin xyz="0 0 1.2" rpy="0 0 0" />
+  </joint>
+
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="imu_link" />
+    <origin xyz="0.15 0.13 0.82" rpy="0 0 -1.5708" />
+  </joint>
+
+  <joint name="gps_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="gps_link" />
+    <origin xyz="0.15 0.13 0.82" rpy="0 0 -1.5708" />
+  </joint>
+
+  <joint name="cam1_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="cam1" />
+    <origin xyz="0.43 0.28 0.8" rpy="0 0 0.57189" />
+  </joint>
+
+  <joint name="cam2_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="cam2" />
+    <origin xyz="0.5 0.0 0.8" rpy="0 0 0" />
+  </joint>
+
+  <joint name="cam3_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="cam3" />
+    <origin xyz="0.43 -0.28 0.8" rpy="0 0 -0.57189" />
+  </joint>
+
+  <joint name="cam4_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="cam4" />
+    <origin xyz="-0.43 0.28 0.8" rpy="0 0 2.5698" />
+  </joint>
+
+  <joint name="cam5_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="cam5" />
+    <origin xyz="-0.5 0.0 0.8" rpy="0 0 -3.1416" />
+  </joint>
+
+  <joint name="cam6_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="cam6" />
+    <origin xyz="-0.43 -0.28 0.8" rpy="0 0 -2.5698" />
+  </joint>
+</robot>
