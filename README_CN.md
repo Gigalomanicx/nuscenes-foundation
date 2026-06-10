@@ -26,7 +26,7 @@ nuscenes_foundation/
 │   ├── pugixml.hpp           # pugixml 头文件
 │   └── pugiconfig.hpp
 ├── params/                   # YAML 配置文件
-│   ├── bjut.yaml             # 示例：北工大校园数据
+│   ├── bjut.yaml             # 示例：BJUT 数据
 │   ├── mit.yaml              # 示例：MIT 数据
 │   ├── hylight_xf.yaml       # 示例：Hylight XF 数据
 │   └── sensing_params/       # 相机内参标定文件
