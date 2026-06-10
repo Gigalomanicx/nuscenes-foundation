@@ -103,11 +103,19 @@ docker run --rm \
   --mount type=bind,src=/path/to/output,target=/output \
   rosbag2nuscenes \
   /data/rosbag /params/config.yaml /output 4
+
+# 示例：BJUT 数据集
+  docker run --rm \
+  --mount type=bind,src=/path/to/bag,target=/data/rosbag \
+  --mount type=bind,src=/path/to/bjut.yaml,target=/params/config.yaml \
+  --mount type=bind,src=/path/to/output,target=/output \
+  rosbag2nuscenes \
+  /data/rosbag /params/config.yaml /output 4
 ```
 
 ## 依赖
 
-- **ROS 2** Humble（推荐）
+- **ROS 2** Humble（推荐，Foxy不可用）
 - **C++17** 编译器
 - ROS 2 包：`rclcpp`、`rosbag2_cpp`、`sensor_msgs`、`nav_msgs`、`cv_bridge`、`pcl_conversions`、`pcl_ros`、`tf2_eigen`
 - 系统库：`OpenCV`、`PCL`、`Eigen3`、`yaml-cpp`、`nlohmann-json`

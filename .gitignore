@@ -10,6 +10,7 @@ docker/log/
 samples/
 sweeps/
 v1.0-mini/
+output/
 
 # Compiled objects
 *.o

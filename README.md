@@ -103,11 +103,19 @@ docker run --rm \
   --mount type=bind,src=/path/to/output,target=/output \
   rosbag2nuscenes \
   /data/rosbag /params/config.yaml /output 4
+
+# Example: BJUT dataset
+  docker run --rm \
+  --mount type=bind,src=/path/to/bag,target=/data/rosbag \
+  --mount type=bind,src=/path/to/bjut.yaml,target=/params/config.yaml \
+  --mount type=bind,src=/path/to/output,target=/output \
+  rosbag2nuscenes \
+  /data/rosbag /params/config.yaml /output 4
 ```
 
 ## Dependencies
 
-- **ROS 2** Humble (recommended)
+- **ROS 2** Humble (recommended, Foxy not available)
 - **C++17** compiler
 - ROS 2 packages: `rclcpp`, `rosbag2_cpp`, `sensor_msgs`, `nav_msgs`, `cv_bridge`, `pcl_conversions`, `pcl_ros`, `tf2_eigen`
 - System: `OpenCV`, `PCL`, `Eigen3`, `yaml-cpp`, `nlohmann-json`
